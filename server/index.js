@@ -11,6 +11,7 @@ const multer=require('multer');
 const fs=require('fs');
 const Places=require('./models/Places');
 const Booking=require('./models/Booking')
+const PORT=process.env.PORT || 5000;
 
 require('dotenv').config();
 app.use(express.json());
@@ -20,7 +21,7 @@ const jwtScrt=process.env.JWT_SECRET;
 
 app.use(cors({
     credentials:true,
-    origin:'http://localhost:3000', 
+    origin:process.env.BASE_URL, 
 }
 ));
 app.use(cookieParser());
@@ -193,4 +194,6 @@ app.get('/bookings',async(req,res)=>{
     const userData = await getUserDataFromReq(req);
     res.json( await Booking.find({user:userData.id}).populate('place'));
 })
-app.listen(5000);
+app.listen(PORT,()=>{
+    console.log(`Server is listening at port no. ${PORT}`);
+});
