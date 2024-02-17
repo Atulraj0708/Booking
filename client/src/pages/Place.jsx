@@ -38,7 +38,7 @@ export default function Place() {
         </div>
         {place?.photos?.length > 0 && place.photos.map(photo => (
           <div>
-             <img src={'http://localhost:5000/uploads/'+photo} alt="" />
+             <img src={process.env.REACT_APP_SER_URL+'/uploads/'+photo} alt="" />
           </div>
         ))}
       </div>

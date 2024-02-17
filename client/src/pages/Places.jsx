@@ -28,7 +28,7 @@ export default function Places() {
             <Link to={'/account/places/'+place._id} className="flex cursor-pointer gap-4 bg-gray-100 p-4 rounded-2xl">
               <div className="flex w-32 h-32 bg-gray-300">
               {place.photos?.length && (
-                   <img className="object-cover" src={'http://localhost:5000/uploads/'+place.photos?.[0]} alt="Loading..." />
+                   <img className="object-cover" src={process.env.REACT_APP_SER_URL+'/uploads/'+place.photos?.[0]} alt="Loading..." />
                  )}
               </div>
               <div className="grow-0 shrink">

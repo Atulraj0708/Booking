@@ -6,6 +6,6 @@ export default function PlaceImage({place,index=0,className=null}) {
     className = 'object-cover';
   }
   return (
-    <img className={className} src={'http://localhost:5000/uploads/'+place.photos[index]} alt=""/>
+    <img className={className} src={process.env.REACT_APP_SER_URL+'/uploads/'+place.photos[index]} alt=""/>
   );
 }
