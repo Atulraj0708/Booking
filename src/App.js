@@ -14,7 +14,7 @@ import Bookings from "./pages/Bookings";
 import Booking from "./pages/Booking";
 
 
-axios.defaults.baseURL='http://localhost:5000';
+axios.defaults.baseURL=process.env.REACT_APP_SER_URL;
 axios.defaults.withCredentials=true;
 function App() {
 
