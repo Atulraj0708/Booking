@@ -12,10 +12,9 @@ const fs=require('fs');
 const Places=require('./models/Places');
 const Booking=require('./models/Booking')
 const PORT=process.env.PORT || 5000;
-
 require('dotenv').config();
 app.use(express.json());
-
+app.use(cors)
 const scrt=bcrypt.genSaltSync(15);
 const jwtScrt=process.env.JWT_SECRET;
 
