@@ -15,7 +15,7 @@ import Booking from "./pages/Booking";
 
 
 axios.defaults.baseURL=process.env.REACT_APP_SER_URL;
-axios.defaults.withCredentials=true;
+
 function App() {
 
   return (
