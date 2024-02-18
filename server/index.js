@@ -18,11 +18,7 @@ app.use(express.json());
 const scrt=bcrypt.genSaltSync(15);
 const jwtScrt=process.env.JWT_SECRET;
 
-app.use(cors({
-    credentials:true,
-    origin:process.env.BASE_URL, 
-}
-));
+app.use(cors());
 app.use(cookieParser());
 
 app.use('/uploads',express.static(__dirname+'/uploads'));
