@@ -22,7 +22,7 @@ const jwtScrt=process.env.JWT_SECRET;
 
 app.use(cors({
     credentials:true,
-    origin:process.env.BASE_URL, 
+    origin:"*", 
 }
 ));
 app.use(cookieParser());
