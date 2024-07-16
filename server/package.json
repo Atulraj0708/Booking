@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "npx nodemon index.js",
+    "start": "nodemon index.js",
     "build": "npm i"
   },
   "dependencies": {
